@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+    <style>
+        [ng-cloak] {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <div ng-controller="HomeCtrl">
+            <span ng-cloak>{{message}}</span>
+
+            <button ng-click="load()">Load</button>
+
+            <div ng-if="isLoaded" ng-cloak>
+                <div ng-controller="SecondCtrl">
+                    <h1>Second Ctrl</h1>
+
+                    <button ng-click="sayHello()">Say Hello</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="require.js" data-main="main"></script>
+</body>
+</html>

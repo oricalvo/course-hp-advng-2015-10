@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+    <div my-app>
+        <div ng-controller="HomeCtrl">
+            {{message}}
+        </div>
+    </div>
+
+    <div my-app>
+        <div ng-controller="HomeCtrl">
+            {{message}}
+        </div>
+    </div>
+
+    <script src="jquery.js"></script>
+    <script src="angular.js"></script>
+    <script src="myApp.js"></script>
+    <script src="HomeCtrl.js"></script>
+
+    <script>
+        $(function () {
+
+            $("[my-app]").each(function () {
+                var element = $(this);
+
+                angular.bootstrap(element, ["myApp"]);
+            });
+
+        });
+
+        //$(function () {
+        //});
+    </script>
+</body>
+</html>

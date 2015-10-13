@@ -1,0 +1,24 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        (function () {
+            "use strict";
+
+            function Point(x, y) {
+                this.x = x;
+                this.y = y;
+
+                dump();
+            }
+
+            var pt = new Point(5, 10);
+            pt.dump();
+
+            Point(5, 10);
+        })();
+    </script>
+</body>
+</html>

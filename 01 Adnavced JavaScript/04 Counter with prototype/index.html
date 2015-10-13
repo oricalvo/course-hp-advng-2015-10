@@ -1,0 +1,35 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+
+        function Counter() {
+            this.num = 0;
+        }
+
+        Counter.prototype.inc = function () {
+            ++this.num;
+        }
+
+        Counter.prototype.dec = function () {
+            --this.num;
+        }
+
+        Counter.prototype.get = function () {
+            return this.num;
+        }
+
+        var c1 = new Counter();
+        var c2 = new Counter();
+
+        c1.inc();
+
+        console.log(c1.get());
+        console.log(c2.get());
+
+        console.log(c1.inc == c2.inc);
+    </script>
+</body>
+</html>

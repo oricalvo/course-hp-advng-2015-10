@@ -1,0 +1,51 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+
+        function Counter() {
+            this.num = 0;
+        }
+
+        Counter.prototype.inc = function () {
+            ++this.num;
+        }
+
+        Counter.prototype.dec = function () {
+            --this.num;
+        }
+
+        Counter.prototype.get = function () {
+            return this.num;
+        }
+
+        Counter.prototype.dump = function () {
+            console.log(this.num);
+        }
+
+        function CounterEx() {
+
+            Counter.call(this);
+
+            this.num2 = 0;
+        }
+
+        CounterEx.prototype = Object.create(Counter.prototype);
+
+        CounterEx.prototype.reset = function () {
+        }
+
+        CounterEx.prototype.dump = function () {
+            Counter.prototype.dump.call(this, x, y);
+
+            console.log(this.num2);
+        }
+
+        var c = new CounterEx();
+        c.inc();
+        c.dump();
+    </script>
+</body>
+</html>
