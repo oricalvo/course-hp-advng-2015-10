@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+
+<html ng-app="MyApp">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Angular</title>
+</head>
+<body>
+    <div ng-controller="HomeCtrl">
+        <input ng-model="name" ng-change="onNameChanged()" />
+
+        <div>{{message}}</div>
+    </div>
+
+    <script src="jquery.js"></script>
+    <script src="angular.js"></script>
+    <script src="ng-stats.js"></script>
+    <script src="App.js"></script>
+    <script src="HomeCtrl.js"></script>
+</body>
+</html>

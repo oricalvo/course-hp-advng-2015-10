@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+
+<html ng-app="MyApp">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Angular</title>
+
+    <link href="jquery-ui.css" rel="stylesheet" />
+</head>
+<body>
+    <div ng-controller="HomeCtrl">
+        <form name="form">
+            <input datepicker max="1/1/2020" class="birthday" ng-model="birthday" name="birthday" />
+            <span ng-show="form.birthday.$error.max">Please specify a valid date</span>
+            <span>{{birthday}}</span>
+
+            <button ng-click="dump()">Dump</button>
+            <button ng-click="change()">Change</button>
+        </form>
+    </div>
+
+    <script src="moment.js"></script>
+    <script src="jquery.js"></script>
+    <script src="jquery-ui.js"></script>
+    <script src="angular.js"></script>
+    <script src="App.js"></script>
+    <script src="DatepickerDirective.js"></script>
+    <script src="HomeCtrl.js"></script>
+</body>
+</html>

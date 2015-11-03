@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+
+<html ng-app="MyApp">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Angular</title>
+
+    <base href="/" />
+</head>
+<body>
+    <div class="status-bar" ng-controller="StatusBarCtrl">
+        {{message}}
+    </div>
+
+    <div ng-controller="HomeCtrl">
+        <button ng-click="run()">Click me</button>
+    </div>
+
+    <script src="jquery.js"></script>
+    <script src="angular.js"></script>
+    <script src="App.js"></script>
+    <script src="StatusBarService.js"></script>
+    <script src="HomeCtrl.js"></script>
+</body>
+</html>

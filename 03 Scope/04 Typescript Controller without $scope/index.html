@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+
+<html ng-app="MyApp">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Angular</title>
+</head>
+<body>
+    <div ng-controller="HomeCtrl as ctrl">
+        <a href="" ng-click="ctrl.gotoAbout()">About</a>
+
+        {{ctrl.message}}
+
+        <ul>
+            <li ng-repeat="contact in ctrl.contacts">
+                <span>{{contact.name}}</span>
+            </li>
+        </ul>
+
+        <button ng-click="ctrl.sayHello()">Say Hello</button>
+    </div>
+
+    <script src="jquery.js"></script>
+    <script src="angular.js"></script>
+    <script src="ng-stats.js"></script>
+    <script src="App.js"></script>
+    <script src="BaseCtrl.js"></script>
+    <script src="HomeCtrl.js"></script>
+</body>
+</html>

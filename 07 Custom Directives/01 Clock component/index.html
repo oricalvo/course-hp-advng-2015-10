@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+
+<html ng-app="MyApp">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Angular</title>
+</head>
+<body>
+    <div ng-controller="HomeCtrl as ctrl">
+        <clock name="ctrl.clock1" ontick="ctrl.onTick(time)" format="ctrl.format"></clock>
+        <clock name="ctrl.clock2" ontick="ctrl.onTick(time)" format="ctrl.format"></clock>
+
+        <input ng-model="ctrl.format" />
+
+        <button ng-click="ctrl.change()">Change</button>
+        <button ng-click="ctrl.stop(ctrl.clock1)">Stop 1</button>
+        <button ng-click="ctrl.stop(ctrl.clock2)">Stop 2</button>
+    </div>
+
+    <script type="text/ng-template" id="/Clock.html">
+        <span>{{ctrl.time | date: ctrl.format}}</span>
+    </script>
+
+    <script src="jquery.js"></script>
+    <script src="angular.js"></script>
+    <script src="App.js"></script>
+    <script src="ClockComponent.js"></script>
+    <script src="HomeCtrl.js"></script>
+</body>
+</html>

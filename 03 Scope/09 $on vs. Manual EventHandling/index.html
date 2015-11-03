@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+
+<html ng-app="MyApp">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Angular</title>
+</head>
+<body>
+    <div ng-controller="AppCtrl">
+        <button ng-click="toggleHome()">Toggle Home</button>
+
+        <div ng-if="showHome">
+            <div ng-controller="HomeCtrl">
+                <span>{{status}}</span>
+
+                <button ng-click="logout()">Logout</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="jquery.js"></script>
+    <script src="angular.js"></script>
+    <script src="ng-stats.js"></script>
+    <script src="App.js"></script>
+    <script src="AuthService.js"></script>
+    <script src="AppCtrl.js"></script>
+    <script src="HomeCtrl.js"></script>
+</body>
+</html>

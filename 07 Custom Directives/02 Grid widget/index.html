@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+
+<html ng-app="MyApp">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Angular</title>
+</head>
+<body>
+    <div ng-controller="HomeCtrl">
+        <button ng-click="change()">Change</button>
+
+        <grid grid-model="contacts" grid-model-item="contact">
+            <column title="{{ID}}">
+                <button ng-click="deleteContact(contact)">Delete</button>
+                <span>{{contact.id}}</span>
+            </column>
+
+            <column title="{{Name}}">
+                <span>{{contact.name}}</span>
+            </column>
+        </grid>
+    </div>
+
+    <script src="jquery.js"></script>
+    <script src="angular.js"></script>
+    <script src="App.js"></script>
+    <script src="GridWidget.js"></script>
+    <script src="HomeCtrl.js"></script>
+</body>
+</html>

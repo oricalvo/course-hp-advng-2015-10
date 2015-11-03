@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+
+<html ng-app="MyApp">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Angular</title>
+
+    <style>
+        input {
+            outline: none;
+        }
+
+        /*.ng-invalid {
+            border-color: red;
+        }*/
+
+        .validation-message {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div ng-controller="HomeCtrl">
+        <form name="form" novalidate>
+            <div>
+                <div>
+                    User Name:
+                </div>
+                <div>
+                    <input required ng-model="userName" name="userName" />
+                    <span ng-show="form.userName.$error.required && (form.userName.$touched || form.$submitted)" class="validation-message">Please specify a user name</span>
+                    <span ng-show="form.userName.$error.userNameEqualsPassword">User name must be different than password</span>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    Password:
+                </div>
+                <div>
+                    <input ng-model="password" />
+                </div>
+            </div>
+
+            <div>
+                <button ng-click="save()">Save</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="jquery.js"></script>
+    <script src="angular.js"></script>
+    <script src="App.js"></script>
+    <script src="HomeCtrl.js"></script>
+</body>
+</html>
